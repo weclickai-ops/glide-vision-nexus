@@ -9,4 +9,5 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Keep the public site as a single immersive homepage with semantic sections; the focused confederation story does not need separate routes.
+- Site is multi-page (/, /about, /domains, /ecosystem, /leadership, /contact) sharing SiteChrome in __root; the user asked for separate pages.
+- Motion lives in src/components/site/motion.tsx using CSS + IntersectionObserver + canvas, no animation library; avoids extra client deps.
