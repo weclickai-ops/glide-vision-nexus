@@ -10,4 +10,5 @@
 <!-- LOVABLE:END -->
 
 - Site is multi-page (/, /about, /domains, /ecosystem, /leadership, /contact) sharing SiteChrome in __root; the user asked for separate pages.
-- Motion lives in src/components/site/motion.tsx using CSS + IntersectionObserver + canvas, no animation library; avoids extra client deps.
+- Visual direction is light, minimal, and editorial with Sora/Manrope; AI is supporting content rather than the primary message.
+- Motion is limited to short CSS and IntersectionObserver reveals; continuous ambient animation and custom cursors are intentionally excluded.
