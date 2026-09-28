@@ -3,6 +3,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import logoAsset from "../../assets/jomolab-logo.png.asset.json";
 import { nav } from "./data";
+import { DriftingAstronaut, SpaceCursor } from "./space";
 
 export function SiteChrome({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -29,6 +30,8 @@ export function SiteChrome({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background font-body text-foreground selection:bg-primary selection:text-background">
       <div ref={glow} className="cursor-glow" aria-hidden="true" />
+      <SpaceCursor />
+      {pathname !== "/" && <DriftingAstronaut />}
       <div className="scanline" aria-hidden="true" />
       <div className="fixed left-0 top-0 z-[60] h-px bg-accent shadow-signal" style={{ width: `${progress * 100}%` }} />
 

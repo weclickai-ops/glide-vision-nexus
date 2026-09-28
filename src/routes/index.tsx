@@ -3,6 +3,7 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { Counter, Marquee, OrbitRings, ParticleField, Reveal, SplitText, Tilt } from "../components/site/motion";
 import { domains, horizon, ventures } from "../components/site/data";
 import { CtaBand } from "../components/site/CtaBand";
+import { AITerminal, HeroAstronaut } from "../components/site/space";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,15 +26,17 @@ function Index() {
         <div className="hero-grid absolute inset-0 opacity-60" aria-hidden="true" />
         <ParticleField />
         <OrbitRings className="size-[min(96vw,860px)]" />
+        <HeroAstronaut className="right-[-4%] top-[14%] w-[min(38vw,460px)] opacity-90" />
+        <HeroAstronaut className="left-[-3%] bottom-[8%] w-[min(16vw,180px)] opacity-50 blur-[1px]" />
         <div className="relative z-10 mx-auto max-w-5xl text-center">
           <p className="reveal-up mb-7 inline-flex items-center gap-2 border border-primary/30 bg-background/70 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.28em] text-accent backdrop-blur">
-            <span className="size-1.5 animate-pulse rounded-full bg-accent" /> Future Technology · R&amp;D Confederation
+            <span className="size-1.5 animate-pulse rounded-full bg-accent" /> AI-Powered · Future Technology R&amp;D
           </p>
           <h1 className="font-display text-[clamp(3.25rem,8vw,7.8rem)] font-bold leading-[0.88]">
             <SplitText text="The future is built by" /> <SplitText text="visionaries." className="text-gradient" start={700} />
           </h1>
           <p className="reveal-up mx-auto mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-xl" style={{ animationDelay: "1100ms" }}>
-            JomoLab unites entrepreneurs, scientists, researchers, and industry leaders to create technologies for 2035 and beyond.
+            JomoLab uses AI in everything we do — to build products and solve real problems — uniting entrepreneurs, scientists, and leaders to create technologies for 2035 and beyond.
           </p>
           <div className="reveal-up mt-10 flex flex-wrap justify-center gap-4" style={{ animationDelay: "1300ms" }}>
             <Link to="/about" className="btn-sweep border border-primary px-6 py-3 font-display text-sm font-bold text-accent">Explore the vision</Link>
@@ -55,6 +58,23 @@ function Index() {
               <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{l}</p>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden border-y border-border px-5 py-24 md:px-8 md:py-32">
+        <div className="aurora absolute inset-0 opacity-50" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-screen-2xl items-center gap-14 lg:grid-cols-2">
+          <Reveal>
+            <p className="section-label">[ AI at the core ]</p>
+            <h2 className="section-title">AI in <span className="text-gradient">everything</span> we build.</h2>
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">Every JomoLab product starts with AI — from spotting problems and running research to designing, testing, and launching solutions faster than ever.</p>
+            <div className="mt-10 grid max-w-xl grid-cols-3 gap-px bg-border">
+              {["Detect problems", "Build products", "Solve at scale"].map((t, i) => (
+                <div key={t} className="bg-background p-5"><span className="font-mono text-[10px] text-primary">AI-0{i + 1}</span><p className="mt-3 font-display text-sm font-bold">{t}</p></div>
+              ))}
+            </div>
+          </Reveal>
+          <Reveal delay={200}><AITerminal /></Reveal>
         </div>
       </section>
 
