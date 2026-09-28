@@ -7,7 +7,7 @@ export function Reveal({ children, className = "", delay = 0, as: Tag = "div" }:
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setShown(true); io.disconnect(); } }, { threshold: 0.15 });
+    const io = new IntersectionObserver(([e]) => { if (e?.isIntersecting) { setShown(true); io.disconnect(); } }, { threshold: 0.15 });
     io.observe(el);
     return () => io.disconnect();
   }, []);
@@ -45,7 +45,7 @@ export function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(([e]) => {
-      if (!e.isIntersecting) return;
+      if (!e?.isIntersecting) return;
       io.disconnect();
       const t0 = performance.now();
       const tick = (t: number) => {
@@ -165,6 +165,7 @@ export function PageHero({ label, title, copy }: { label: string; title: string;
       <div className="hero-grid absolute inset-0 opacity-60" aria-hidden="true" />
       <ParticleField className="opacity-70" />
       <OrbitRings className="size-[min(90vw,640px)] left-[80%]" />
+      <div className="planet absolute right-[8%] top-[22%] hidden size-40 md:block" aria-hidden="true"><div className="planet-ring" /></div>
       <div className="relative z-10 mx-auto w-full max-w-screen-2xl">
         <p className="section-label reveal-up">{label}</p>
         <h1 className="font-display text-[clamp(3rem,8vw,8rem)] font-bold leading-[0.9]"><SplitText text={title} /></h1>
