@@ -23,7 +23,7 @@ function Index() {
         <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-8">
             <p className="section-label reveal-up">Global research infrastructure / 2035+</p>
-            <h1 className="reveal-up max-w-5xl font-display text-[clamp(3.4rem,7.4vw,7.5rem)] font-light leading-[.98]">Fu-Tech <span className="font-semibold">R&amp;D Confederation</span></h1>
+            <h1 className="reveal-up max-w-5xl font-display text-[clamp(2.65rem,7.4vw,7.5rem)] font-light leading-[.98]">Fu-Tech <span className="font-semibold">R&amp;D Confederation</span></h1>
           </div>
           <div className="lg:col-span-4">
             <p className="border-l border-border pl-5 text-lg leading-8 text-muted-foreground">JomoLab unites entrepreneurs, scientists, researchers, innovators, and industry leaders to build technologies for 2035 and beyond.</p>
