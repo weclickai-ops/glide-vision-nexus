@@ -3,7 +3,7 @@ import { ArrowDownRight, ArrowRight } from "lucide-react";
 import biosphere from "../assets/sustainable-biosphere.jpg";
 import { CtaBand } from "../components/site/CtaBand";
 import { domains, ventures } from "../components/site/data";
-import { Reveal } from "../components/site/motion";
+import { ResearchTrace, Reveal } from "../components/site/motion";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -21,6 +21,7 @@ function Index() {
   return <>
     <section className="relative min-h-[92svh] overflow-hidden px-5 pb-16 pt-32 md:px-8 md:pb-20 md:pt-36">
       <div className="editorial-grid absolute inset-0 opacity-20" aria-hidden="true" />
+      <ResearchTrace className="bottom-[9%] left-[3%] hidden w-[30%] opacity-60 lg:block" />
       <div className="relative mx-auto grid max-w-screen-2xl items-center gap-10 lg:grid-cols-12">
         <div className="z-10 lg:col-span-5">
           <p className="section-label reveal-up">R&amp;D 01 · Global confederation</p>

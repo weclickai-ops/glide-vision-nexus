@@ -76,6 +76,8 @@ a, button { outline-offset: 4px; }
 }
 
 @keyframes reveal { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes trace-draw { 0% { stroke-dashoffset: 1; } 45%, 100% { stroke-dashoffset: 0; } }
+@keyframes node-sample { 0%, 100% { opacity: .28; transform: scale(.7); } 45% { opacity: 1; transform: scale(1.35); } }
 .page-enter { animation: reveal .55s ease-out both; }
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
 .reveal.is-in { opacity: 1; transform: none; }
@@ -93,6 +95,14 @@ a, button { outline-offset: 4px; }
 .story-link:hover::after { transform: scaleX(1); }
 .editorial-row { transition: background-color .25s ease, padding-left .25s ease; }
 .editorial-row:hover { background: var(--wash); padding-left: 1rem; }
+.research-trace text { fill: var(--muted-foreground); font-family: var(--font-mono); font-size: 9px; letter-spacing: .12em; }
+.trace-base { stroke: var(--border); stroke-width: 1; }
+.trace-live { stroke: var(--primary); stroke-width: 1.5; stroke-dasharray: 1; stroke-dashoffset: 1; animation: trace-draw 6s cubic-bezier(.65,0,.35,1) infinite; }
+.trace-axis { stroke: var(--border); stroke-width: 1; }
+.trace-node { fill: var(--background); stroke: var(--primary); stroke-width: 1.5; transform-box: fill-box; transform-origin: center; animation: node-sample 3.2s ease-in-out infinite; }
+.portrait-reveal { overflow: hidden; background: var(--wash); }
+.portrait-reveal img { filter: grayscale(1); transition: filter .45s ease, transform .6s ease; }
+.portrait-reveal:hover img { filter: grayscale(0); transform: scale(1.025); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
