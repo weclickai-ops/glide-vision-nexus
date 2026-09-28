@@ -161,3 +161,23 @@ a, button { outline-offset: 4px; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal, .split-char, .reveal-up { opacity: 1 !important; transform: none !important; filter: none !important; }
 }.split-char.text-gradient { animation: char-rise .8s cubic-bezier(.16,1,.3,1) both, gradient-shift 4s linear infinite; }
+
+/* ---- Space cursor & astronauts ---- */
+.has-space-cursor, .has-space-cursor a, .has-space-cursor button { cursor: none; }
+.space-cursor { position: fixed; inset: 0; pointer-events: none; z-index: 100; }
+.sc-dot, .sc-ring, .sc-label { position: fixed; left: 0; top: 0; will-change: transform; }
+.has-space-cursor .sc-dot { display: block; }
+.sc-dot { display: none; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 9999px; background: var(--accent); box-shadow: var(--shadow-signal); }
+.sc-ring { display: none; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 9999px; border: 1px solid color-mix(in oklab, var(--primary) 80%, transparent); transition: border-color .3s, background-color .3s; }
+.has-space-cursor .sc-ring { display: block; }
+.sc-ring.is-hover { background: color-mix(in oklab, var(--primary) 18%, transparent); border-color: var(--accent); }
+.sc-label { font-family: var(--font-mono); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); opacity: 0; transition: opacity .3s; white-space: nowrap; }
+@keyframes float-y { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-24px) rotate(3deg); } }
+.float-y { animation: float-y 7s ease-in-out infinite; }
+.tether { position: absolute; left: 50%; top: 50%; width: 1px; height: 60vh; background: linear-gradient(to bottom, color-mix(in oklab, var(--primary) 50%, transparent), transparent); transform-origin: top; }
+@keyframes blink { 50% { opacity: 0; } }
+.caret { animation: blink 1s steps(1) infinite; }
+@keyframes planet-spin { to { transform: rotate(360deg); } }
+.planet { border-radius: 9999px; background: radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--accent) 60%, var(--primary)), var(--primary) 40%, var(--background) 75%); box-shadow: 0 0 80px color-mix(in oklab, var(--primary) 40%, transparent), inset -30px -30px 60px var(--background); }
+.planet-ring { position: absolute; inset: -18% -45%; border-radius: 9999px; border: 1px solid color-mix(in oklab, var(--accent) 40%, transparent); transform: rotateX(75deg) rotateZ(-15deg); }
+@media (prefers-reduced-motion: reduce) { .drifter { display: none !important; } }
