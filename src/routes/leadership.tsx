@@ -36,7 +36,7 @@ function Leadership() {
               <Reveal key={name} delay={i * 110}>
                 <Tilt className="glass-card group h-full p-8">
                   <div className="avatar-ring grid size-16 place-items-center rounded-full font-display text-lg font-bold text-accent">
-                    {name.split(" ").map((p) => p[0]).slice(0, 2).join("")}
+                    {(name ?? "").split(" ").map((p) => p[0]).slice(0, 2).join("")}
                   </div>
                   <h2 className="mt-10 font-display text-xl font-bold">{name}</h2>
                   <p className="mt-2 text-sm text-muted-foreground">{role}</p>

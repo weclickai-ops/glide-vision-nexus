@@ -125,7 +125,7 @@ export function ParticleField({ className = "" }: { className?: string }) {
       }
       for (let i = 0; i < pts.length; i++) {
         for (let j = i + 1; j < pts.length; j++) {
-          const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+          const a = pts[i]!, b = pts[j]!, d = Math.hypot(a.x - b.x, a.y - b.y);
           if (d < 130) {
             ctx.globalAlpha = (1 - d / 130) * 0.5;
             ctx.strokeStyle = color; ctx.lineWidth = 0.6;
