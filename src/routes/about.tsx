@@ -1,57 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
-import orbitalResearch from "../assets/orbital-research.jpg";
-import { PageHero, Reveal, Tilt } from "../components/site/motion";
-import { vision } from "../components/site/data";
+import biosphere from "../assets/sustainable-biosphere.jpg";
 import { CtaBand } from "../components/site/CtaBand";
+import { vision } from "../components/site/data";
+import { PageHero, Reveal } from "../components/site/motion";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About JomoLab® | From FOMO to JOMO" },
-      { name: "description", content: "JomoLab's philosophy and 2035 vision: technology that brings clarity, purpose, and sustainable progress." },
-      { property: "og:title", content: "About JomoLab® | From FOMO to JOMO" },
-      { property: "og:description", content: "Technology should simplify life, empower people, and create sustainable progress." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: About,
-});
+export const Route = createFileRoute("/about")({ head: () => ({ meta: [
+  { title: "About JomoLab® | Purposeful Future Research" },
+  { name: "description", content: "Discover JomoLab's philosophy and its vision for clear, purposeful, sustainable technology." },
+  { property: "og:title", content: "About JomoLab® | Purposeful Future Research" },
+  { property: "og:description", content: "Technology should simplify life, empower people, and create sustainable progress." },
+  { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
+] }), component: About });
 
-function About() {
-  return (
-    <>
-      <PageHero label="[ 01 / Philosophy ]" title="From FOMO to JOMO" copy="The modern world is driven by fear, distraction, and information overload. JOMO represents clarity, purpose, and meaningful innovation." />
-      <section className="px-5 py-24 md:px-8 md:py-36">
-        <div className="mx-auto grid max-w-screen-2xl items-center gap-16 lg:grid-cols-2 lg:gap-24">
-          <Reveal>
-            <h2 className="section-title">Technology that makes life <span className="text-gradient">better.</span></h2>
-            <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">We believe technology should simplify life, empower people, and create sustainable progress—not more digital chaos.</p>
-          </Reveal>
-          <Reveal delay={150}>
-            <Tilt className="relative">
-              <div className="scan-img relative overflow-hidden border border-border">
-                <img src={orbitalResearch} alt="Orbital visualization representing purposeful future research" loading="lazy" width={1600} height={1200} className="kenburns aspect-[4/3] w-full object-cover" />
-              </div>
-              <span className="absolute -left-3 -top-3 size-10 border-l border-t border-accent" />
-              <span className="absolute -bottom-3 -right-3 size-10 border-b border-r border-accent" />
-            </Tilt>
-          </Reveal>
-        </div>
-      </section>
-      <section className="border-t border-border px-5 py-24 md:px-8 md:py-36">
-        <div className="mx-auto grid max-w-screen-2xl gap-14 lg:grid-cols-[0.8fr_1.2fr]">
-          <Reveal><p className="section-label">[ Vision / 2035 ]</p><h2 className="section-title">Building the future together.</h2></Reveal>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {vision.map((item, i) => (
-              <Reveal key={item} delay={i * 120}>
-                <Tilt className="glass-card h-full p-8"><span className="font-mono text-xs text-primary">0{i + 1}</span><p className="mt-10 font-display text-xl font-medium">{item}</p></Tilt>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-      <CtaBand />
-    </>
-  );
-}
+function About() { return <>
+  <PageHero label="01 / About" title="Clarity over noise." copy="JomoLab is a global Future Technology R&D Confederation created to turn purposeful research into useful, sustainable progress." />
+  <section className="px-5 py-20 md:px-8 md:py-28"><div className="mx-auto grid max-w-screen-2xl gap-14 lg:grid-cols-12 lg:items-center">
+    <Reveal className="lg:col-span-5"><p className="section-label">Our philosophy</p><h2 className="section-title">From FOMO to JOMO.</h2><p className="mt-8 max-w-lg text-lg leading-8 text-muted-foreground">The modern world rewards urgency and distraction. We choose meaningful innovation: technology that simplifies life, empowers people, and creates lasting value.</p></Reveal>
+    <Reveal delay={100} className="lg:col-span-6 lg:col-start-7"><div className="image-frame overflow-hidden border border-border"><img src={biosphere} alt="Sustainable city research concept" loading="lazy" width={1600} height={1200} className="aspect-[4/3] w-full object-cover" /></div><p className="mt-3 font-mono text-[9px] uppercase text-muted-foreground">Fig. 01 — Sustainable systems study</p></Reveal>
+  </div></section>
+  <section className="border-t border-border px-5 py-20 md:px-8 md:py-28"><div className="mx-auto grid max-w-screen-2xl gap-12 lg:grid-cols-12"><Reveal className="lg:col-span-4"><p className="section-label">Vision / 2035</p><h2 className="section-title">What we are here to advance.</h2></Reveal><div className="divide-y divide-border border-y border-border lg:col-span-7 lg:col-start-6">{vision.map((item, index) => <Reveal key={item} delay={index * 60} className="grid grid-cols-[3rem_1fr] gap-5 py-7"><span className="font-mono text-xs text-primary">0{index + 1}</span><p className="font-display text-xl font-medium md:text-2xl">{item}</p></Reveal>)}</div></div></section>
+  <CtaBand />
+</>; }
