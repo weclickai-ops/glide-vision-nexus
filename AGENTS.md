@@ -12,3 +12,4 @@
 - Site is multi-page (/, /about, /domains, /ecosystem, /leadership, /contact) sharing SiteChrome in __root; the user asked for separate pages.
 - Visual direction is light, minimal, and editorial with Sora/Manrope; AI is supporting content rather than the primary message.
 - Motion is limited to short CSS and IntersectionObserver reveals; continuous ambient animation and custom cursors are intentionally excluded.
+- Research-themed motion uses softly drawn evidence paths and sampling nodes; it must remain smooth, restrained, and informative.
