@@ -17,9 +17,20 @@ export const ventures = [
 
 export const advisors = [
   ["Vinay Singhal", "Co-Founder & CEO, STAGE OTT"],
-  ["Ankur Dinesh Garg", "AI Advisor · IIT Bombay · Founder, Hotify AI"],
+  ["Ankur Dinesh Garg", "Advisor · Manthan, Government of India · IIT Bombay · Founder, Hotify AI"],
   ["Senthil Narasimhan", "Global Program Manager, Cognizant Switzerland"],
-  ["Dinesh Murlidharan", "Strategic Advisor, UAE Trade Commission"],
+  ["Dinesh Murlidharan", "Strategic Advisor, Trade & Investment · UAE Trade Commission"],
+];
+
+export const members = [
+  ["Vivek Dangi", "Technocrat · Head of International Collaboration", "Toronto, Canada"],
+  ["Aakash Porwal", "Space Tech Researcher · Entrepreneur · Member, ISRO", "India"],
+  ["Manoj Pachauri", "Lead Growth Strategist, JomoLab", "India"],
+  ["Aayush Gorani", "Serial Entrepreneur · Head of Business Development", "India"],
+  ["Mayank Srivastava", "Subject Matter Expert, Design & Communication", "India"],
+  ["Lalit Barman", "Subject Matter Expert, Virtual Reality", "India"],
+  ["Nikhil Bhatnagar", "Founder, Homeguruji and Sparkvr", "India"],
+  ["Saurabh Tiwari", "Visionary Leader · Technocrat", "India"],
 ];
 
 export const vision = ["Build globally impactful ventures", "Foster world-class research", "Advance sustainable innovation", "Bridge ideas and implementation"];
