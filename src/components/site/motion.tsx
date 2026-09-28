@@ -23,12 +23,12 @@ export function Reveal({ children, className = "", delay = 0, as: Tag = "div" }:
 export function SplitText({ text, className = "", start = 0 }: { text: string; className?: string; start?: number }) {
   let i = 0;
   return (
-    <span className={className} aria-label={text}>
+    <span aria-label={text}>
       {text.split(" ").map((word, w) => (
         <span key={w} className="inline-block whitespace-nowrap" aria-hidden="true">
           {word.split("").map((ch) => {
             const d = start + i++ * 28;
-            return <span key={i} className="split-char" style={{ animationDelay: `${d}ms` }}>{ch}</span>;
+            return <span key={i} className={`split-char ${className}`} style={{ animationDelay: `${d}ms` }}>{ch}</span>;
           })}
           {"\u00A0"}
         </span>
