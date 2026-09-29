@@ -6,4 +6,4 @@
 - [x] Rebuild all six pages with restrained research-led motion.
 - [x] Remove portrait photography from the Leadership page.
 - [x] Verify desktop and mobile layouts, navigation, metadata, and rendering.
-- [ ] Match the homepage first viewport to the supplied JomoLab cover reference.
+- [x] Match the homepage first viewport to the supplied JomoLab cover reference.

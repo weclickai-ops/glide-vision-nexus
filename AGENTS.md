@@ -14,3 +14,4 @@
 - Motion is limited to short CSS and IntersectionObserver reveals; continuous ambient animation and custom cursors are intentionally excluded.
 - Research-themed motion uses softly drawn evidence paths and sampling nodes; it must remain smooth, restrained, and informative.
 - Leadership is typography-led with no portraits; names, roles, and affiliations are the only personal presentation.
+- The homepage opens with a bright sustainable-city cover inspired by the supplied JomoLab reference; inner pages retain the institutional research grid.

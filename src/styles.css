@@ -76,11 +76,14 @@ a, button { outline-offset: 4px; }
 }
 
 @keyframes reveal { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes cover-settle { from { opacity: .4; transform: scale(1.025); } to { opacity: 1; transform: scale(1); } }
 @keyframes trace-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 .page-enter { animation: reveal .42s ease-out both; }
 .reveal { opacity: 0; transform: translateY(12px); transition: opacity .55s ease, transform .55s ease; }
 .reveal.is-in { opacity: 1; transform: none; }
 .reveal-up { animation: reveal .55s ease-out both; }
+.home-cover-image { animation: cover-settle 1.25s cubic-bezier(.22,.75,.28,1) both; object-position: center center; }
+.home-cover-copy { text-shadow: 0 1px 14px color-mix(in oklab, var(--background) 90%, transparent); }
 .editorial-grid { background-image: linear-gradient(to right, color-mix(in oklab, var(--foreground) 7%, transparent) 1px, transparent 1px); background-size: calc(100% / 12) 100%; }
 .nav-link { position: relative; transition: color .25s ease; }
 .nav-link::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 1px; background: var(--primary); transform: scaleX(0); transform-origin: right; transition: transform .3s ease; }
@@ -101,6 +104,12 @@ a, button { outline-offset: 4px; }
 .research-card svg path, .research-card svg circle, .research-card svg rect, .research-card svg line { transition: stroke .25s ease; }
 .research-card:hover svg path, .research-card:hover svg circle, .research-card:hover svg rect, .research-card:hover svg line { stroke: var(--primary); }
 .technical-rule { height: 1px; background: var(--foreground); }
+
+@media (max-width: 767px) {
+  .home-cover { min-height: 760px; align-items: flex-start; }
+  .home-cover-image { object-position: 61% center; opacity: .66; }
+  .home-cover-copy { align-self: flex-start; margin-top: 1.5rem; padding: 1.5rem 1.25rem 1.75rem 0; background: linear-gradient(90deg, color-mix(in oklab, var(--background) 96%, transparent) 0%, color-mix(in oklab, var(--background) 78%, transparent) 70%, transparent 100%); }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
