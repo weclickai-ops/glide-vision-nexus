@@ -10,7 +10,7 @@
 <!-- LOVABLE:END -->
 
 - Site is multi-page (/, /about, /domains, /ecosystem, /leadership, /contact) sharing SiteChrome in __root; the user asked for separate pages.
-- Visual direction is a light institutional research grid with Sora/Manrope, thin rules, and restrained teal; AI is supporting content rather than the primary message.
+- Visual direction is a light institutional research grid with Poppins throughout, thin rules, and restrained teal; AI is supporting content rather than the primary message.
 - Motion is limited to short CSS and IntersectionObserver reveals; continuous ambient animation and custom cursors are intentionally excluded.
 - Research-themed motion uses softly drawn evidence paths and sampling nodes; it must remain smooth, restrained, and informative.
 - Leadership is typography-led with no portraits; names, roles, and affiliations are the only personal presentation.
