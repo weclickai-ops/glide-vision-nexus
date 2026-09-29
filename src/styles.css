@@ -25,9 +25,9 @@
   --color-ring: var(--ring);
   --color-wash: var(--wash);
   --color-leaf: var(--leaf);
-  --font-display: "Sora", sans-serif;
-  --font-body: "Manrope", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  --font-display: "Poppins", sans-serif;
+  --font-body: "Poppins", sans-serif;
+  --font-mono: "Poppins", sans-serif;
 }
 
 :root {
