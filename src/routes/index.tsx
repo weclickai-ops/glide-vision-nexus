@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { CtaBand } from "../components/site/CtaBand";
 import { domains, ventures } from "../components/site/data";
 import { ResearchDiagram, ResearchTrace, Reveal } from "../components/site/motion";
+import futureCity from "../assets/future-city-hero.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -18,19 +19,25 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return <>
-    <section className="px-5 pb-16 pt-32 md:px-8 md:pb-20 md:pt-40">
-      <div className="mx-auto max-w-screen-2xl border-t border-foreground pt-8">
-        <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-8">
-            <p className="section-label reveal-up">Global research infrastructure / 2035+</p>
-            <h1 className="reveal-up max-w-5xl font-display text-[clamp(2.65rem,7.4vw,7.5rem)] font-light leading-[.98]">Fu-Tech <span className="font-semibold">R&amp;D Confederation</span></h1>
-          </div>
-          <div className="lg:col-span-4">
-            <p className="border-l border-border pl-5 text-lg leading-8 text-muted-foreground">JomoLab unites entrepreneurs, scientists, researchers, innovators, and industry leaders to build technologies for 2035 and beyond.</p>
-            <Link to="/domains" className="story-link mt-8 inline-flex items-center gap-3 pb-2 font-mono text-[10px] uppercase text-primary">Explore research <ArrowRight className="size-4" /></Link>
-          </div>
+    <section className="home-cover relative isolate flex min-h-[min(900px,100svh)] overflow-hidden border-b-4 border-primary pt-20">
+      <img src={futureCity} alt="A sustainable future city beneath a glass biosphere" width={1600} height={1100} fetchPriority="high" className="home-cover-image absolute inset-0 -z-10 size-full object-cover" />
+      <div className="mx-auto flex w-full max-w-screen-2xl items-center px-5 py-20 md:px-8 lg:px-16">
+        <div className="home-cover-copy max-w-[42rem]">
+          <h1 className="reveal-up font-display text-[clamp(3.65rem,8vw,7.6rem)] font-semibold leading-none text-primary">JomoLab<sup className="ml-1 align-top text-[.34em] font-normal">®</sup></h1>
+          <p className="reveal-up mt-4 font-display text-[clamp(1.35rem,2.8vw,2.4rem)] font-light leading-tight text-foreground">Fu-Tech R&amp;D Confederation</p>
+          <div className="mt-8 h-px w-56 bg-primary/40" />
+          <p className="reveal-up mt-7 max-w-lg font-display text-[clamp(1.15rem,2vw,1.65rem)] font-light leading-relaxed text-foreground">Pioneering Tomorrow&apos;s Innovations<br className="hidden sm:block" /> for a Sustainable Earth</p>
         </div>
-        <div className="mt-16 grid border border-border bg-border md:grid-cols-4 md:gap-px">
+      </div>
+    </section>
+
+    <section className="px-5 py-16 md:px-8 md:py-20">
+      <div className="mx-auto max-w-screen-2xl">
+        <div className="mb-9 grid gap-5 border-b border-foreground pb-8 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-8"><p className="section-label">Global research infrastructure / 2035+</p><h2 className="section-title">Research domains</h2></div>
+          <p className="max-w-md text-base leading-7 text-muted-foreground lg:col-span-4">JomoLab unites entrepreneurs, scientists, researchers, innovators, and industry leaders to build technologies for 2035 and beyond.</p>
+        </div>
+        <div className="grid border border-border bg-border md:grid-cols-4 md:gap-px">
           {domains.map(([id, title], index) => <Link key={id} to="/domains" className="research-card group flex min-h-44 flex-col justify-between border-b border-border p-6 last:border-b-0 md:border-b-0">
             <div className="flex items-start justify-between"><span className="font-mono text-[9px] text-primary">DMN-{id}</span><div className="size-16"><ResearchDiagram index={index} /></div></div>
             <div className="flex items-end justify-between gap-4"><h2 className="max-w-[12rem] font-display text-lg font-medium">{title}</h2><ArrowRight className="size-4 text-muted-foreground transition-transform group-hover:translate-x-1" /></div>
