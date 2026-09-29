@@ -24,8 +24,8 @@ function Index() {
     <section className="home-cover relative isolate flex min-h-[min(900px,100svh)] overflow-hidden border-b-4 border-primary pt-20">
       <picture className="absolute inset-0 -z-10 block size-full">
         <source media="(max-width: 520px)" srcSet={futureCityMobile} />
-        <source media="(max-width: 899px)" srcSet={futureCity} />
-        <img src={futureCityWide} alt="A sustainable future city beneath a glass biosphere" width={1920} height={900} fetchPriority="high" className="home-cover-image size-full object-cover" />
+        <source media="(min-aspect-ratio: 3/2)" srcSet={futureCityWide} />
+        <img src={futureCity} alt="A sustainable future city beneath a glass biosphere" width={1600} height={1104} fetchPriority="high" className="home-cover-image size-full object-cover" />
       </picture>
       <div className="mx-auto flex w-full max-w-screen-2xl items-center px-5 py-20 md:px-8 lg:px-16">
         <div className="home-cover-copy max-w-[42rem]">
