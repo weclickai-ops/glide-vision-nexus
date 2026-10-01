@@ -159,11 +159,15 @@ a, button { outline-offset: 4px; }
   .home-shade { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 93%, transparent) 0%, color-mix(in oklab, var(--background) 62%, transparent) 45%, transparent 72%); }
   .home-cover-image { object-position: 58% center; }
   .home-hero-copy { align-self: flex-start; margin-top: 2rem; }
-  .home-hero-title { max-width: 10ch; font-size: clamp(2.65rem, 12vw, 4.2rem); }
+  .home-hero-title { max-width: 11ch; font-size: clamp(2.65rem, 8vw, 3.65rem); }
+  .home-hero-tagline { max-width: 32rem; }
   .home-research-trace { inset: 28% -32% auto 8%; width: 124%; height: 45%; opacity: .65; }
   .inner-hero-orbit { width: 80vw; right: -30vw; top: 5%; }
 }
-@media (max-width: 520px) { .home-cover-image { object-position: 54% center; } }
+@media (max-width: 520px) {
+  .home-cover-image { object-position: 54% center; }
+  .home-hero-title { max-width: 10ch; font-size: clamp(2.65rem, 12vw, 3.15rem); }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
