@@ -9,7 +9,7 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Site is multi-page (/, /about, /domains, /ecosystem, /leadership, /contact) sharing SiteChrome in __root; the user asked for separate pages.
+- Site has exactly six pages (/, /about, /domains, /ecosystem, /products, /contact) sharing SiteChrome in __root; member content belongs inside Ecosystem.
 - Visual direction adapts Marity’s image-led research editorial system: Poppins, pale modular panels, asymmetric soft corners, restrained teal, and a dark structured footer; AI remains supporting content.
 - Motion is limited to short CSS and IntersectionObserver reveals; continuous ambient animation and custom cursors are intentionally excluded.
 - Research-themed motion uses softly drawn evidence paths and sampling nodes; it must remain smooth, restrained, and informative.

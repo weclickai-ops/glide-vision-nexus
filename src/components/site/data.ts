@@ -30,9 +30,10 @@ export const members = [
 ];
 
 export const nav = [
-  ["/about", "About"],
-  ["/domains", "Fu-Tech Research"],
+  ["/", "Home"],
+  ["/about", "About Jomolab"],
+  ["/domains", "Fu-tech Research"],
   ["/ecosystem", "Ecosystem"],
-  ["/leadership", "Members"],
-  ["/products", "Products & IPs"],
+  ["/products", "Product & IPs"],
+  ["/contact", "Connect us"],
 ] as const;
