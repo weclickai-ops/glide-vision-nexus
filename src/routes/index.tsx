@@ -24,11 +24,17 @@ function Index() {
         <img src={futureCity} alt="A sustainable future city beneath a glass biosphere" width={1600} height={1104} fetchPriority="high" className="home-cover-image size-full object-cover" />
       </picture>
       <div className="home-shade absolute inset-0 -z-10" />
+      <svg className="home-research-trace" viewBox="0 0 1000 520" fill="none" aria-hidden="true">
+        <path className="home-trace-path" d="M70 366C212 366 224 266 348 266C470 266 486 344 606 344C736 344 750 208 914 208" />
+        <circle className="home-trace-node home-trace-node-one" cx="348" cy="266" r="5" />
+        <circle className="home-trace-node home-trace-node-two" cx="606" cy="344" r="5" />
+        <circle className="home-trace-node home-trace-node-three" cx="914" cy="208" r="5" />
+      </svg>
       <div className="site-container flex min-h-[min(900px,100svh)] items-center pb-20 pt-32">
-        <div className="max-w-3xl">
-          <p className="section-label reveal-up text-foreground">Global Fu-Tech R&amp;D Confederation</p>
-          <h1 className="reveal-up display-title text-primary">JomoLab<sup className="ml-1 align-top text-[.28em] font-normal">®</sup></h1>
-          <p className="reveal-up mt-7 max-w-xl text-xl font-light leading-relaxed text-foreground md:text-3xl">Pioneering Tomorrow&apos;s Innovations for a Sustainable Earth</p>
+        <div className="home-hero-copy max-w-3xl">
+          <p className="section-label home-hero-label text-foreground">Global</p>
+          <h1 className="home-hero-title max-w-2xl text-primary">Fu-Tech R&amp;D<br className="hidden sm:block" /> Confederation</h1>
+          <p className="home-hero-tagline mt-7 max-w-xl text-xl font-light leading-relaxed text-foreground md:text-3xl">Pioneering Tomorrow&apos;s Innovations for a Sustainable Earth</p>
         </div>
       </div>
     </section>
