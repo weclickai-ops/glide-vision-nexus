@@ -9,19 +9,27 @@ export function SiteChrome({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 28);
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 28);
+      if (y > lastY + 4 && y > 140) setHidden(true);
+      else if (y < lastY - 4 || y <= 140) setHidden(false);
+      lastY = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  useEffect(() => { setOpen(false); window.scrollTo(0, 0); }, [pathname]);
+  useEffect(() => { setOpen(false); setHidden(false); window.scrollTo(0, 0); }, [pathname]);
 
   const home = pathname === "/";
   return (
     <div className="min-h-screen overflow-x-hidden bg-background font-body text-foreground">
-      <header className={`site-header ${home && !scrolled ? "is-overlay" : "is-solid"}`}>
+      <header className={`site-header ${hidden ? "is-solid is-hidden" : home && !scrolled ? "is-overlay" : "is-solid"}`}>
         <div className="site-container flex h-[5.4rem] items-center justify-between gap-6">
           <Link to="/" aria-label="JomoLab home" className="brand-lockup">
             <img src={logoAsset.url} alt="JomoLab" className="h-6 w-auto" />
