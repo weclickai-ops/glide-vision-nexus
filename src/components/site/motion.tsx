@@ -37,7 +37,7 @@ export function PageHero({ label, title, copy }: { label?: string; title: string
 }
 
 export function SectionHeading({ eyebrow, title, action }: { eyebrow: string; title: string; action?: ReactNode }) {
-  return <div className="section-heading"><div><p className="section-label">{eyebrow}</p><h2 className="section-title">{title}</h2></div>{action}</div>;
+  return <div className="section-heading"><div>{eyebrow && <p className="section-label">{eyebrow}</p>}<h2 className="section-title">{title}</h2></div>{action}</div>;
 }
 
 export function ResearchDiagram({ index = 0, className = "" }: { index?: number; className?: string }) {

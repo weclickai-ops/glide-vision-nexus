@@ -4,9 +4,9 @@ import { ventures } from "../components/site/data";
 import { PageHero, ResearchDiagram, Reveal, SectionHeading } from "../components/site/motion";
 
 export const Route = createFileRoute("/products")({ head: () => ({ meta: [
-  { title: "Products & IPs | JomoLab®" },
+  { title: "Product & IPs | JomoLab®" },
   { name: "description", content: "Top-Notch Brains To Create Standout Products" },
-  { property: "og:title", content: "Products & IPs | JomoLab®" },
+  { property: "og:title", content: "Product & IPs | JomoLab®" },
   { property: "og:description", content: "JomoLab operates as an innovation ecosystem where ideas evolve into impactful ventures." },
   { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
 ] }), component: Products });

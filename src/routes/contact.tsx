@@ -4,9 +4,9 @@ import collaborationImage from "../assets/research-collaboration.jpg";
 import { PageHero, Reveal } from "../components/site/motion";
 
 export const Route = createFileRoute("/contact")({ head: () => ({ meta: [
-  { title: "Contact JomoLab® | Join the Confederation" },
+  { title: "Connect Us | JomoLab®" },
   { name: "description", content: "Website: jomolab.co Email: ratnesh@jomolab.in" },
-  { property: "og:title", content: "Contact JomoLab® | Join the Confederation" },
+  { property: "og:title", content: "Connect Us | JomoLab®" },
   { property: "og:description", content: "Future Begins Here. Join The Confederation." },
   { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
 ] }), component: Contact });
