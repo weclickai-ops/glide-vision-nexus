@@ -37,11 +37,10 @@ export function SiteChrome({ children }: { children: ReactNode }) {
           </Link>
           <nav className="hidden items-center gap-7 text-[10px] font-medium uppercase lg:flex">
             {nav.map(([to, label]) => <Link key={to} to={to} className="nav-link" activeProps={{ className: "nav-link is-active" }}>{label}</Link>)}
-            <Link to="/contact" className="nav-cta">Join Us <ArrowUpRight className="size-3.5" /></Link>
           </nav>
           <Button type="button" variant="ghost" size="icon" className="menu-button lg:hidden" onClick={() => setOpen((value) => !value)} aria-expanded={open} aria-label={open ? "Close menu" : "Open menu"}>{open ? <X /> : <Menu />}</Button>
         </div>
-        {open && <nav className="mobile-menu">{[...nav, ["/contact", "Join Us"] as const].map(([to, label], index) => <Link key={to} to={to}><span>{String(index + 1).padStart(2, "0")}</span>{label}<ArrowUpRight className="ml-auto size-4" /></Link>)}</nav>}
+        {open && <nav className="mobile-menu">{nav.map(([to, label], index) => <Link key={to} to={to}><span>{String(index + 1).padStart(2, "0")}</span>{label}<ArrowUpRight className="ml-auto size-4" /></Link>)}</nav>}
       </header>
       <main key={pathname} className="page-enter">{children}</main>
       <footer className="site-footer">
