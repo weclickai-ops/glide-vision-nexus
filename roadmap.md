@@ -11,4 +11,4 @@
 - [x] Rebuild all seven pages end to end in the Marity-inspired visual and motion system while preserving exact approved content.
 - [x] Consolidate the final PDF wording into the six requested pages and remove Members as a separate page.
 - [x] Give the homepage final polish with restrained research animation and remove the repeated JomoLab banner wordmark.
-- [ ] Add layered attention-guiding research motion to the existing homepage without changing its interface.
+- [x] Add layered attention-guiding research motion to the existing homepage without changing its interface.
