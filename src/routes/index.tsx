@@ -24,6 +24,9 @@ function Index() {
         <img src={futureCity} alt="A sustainable future city beneath a glass biosphere" width={1600} height={1104} fetchPriority="high" className="home-cover-image size-full object-cover" />
       </picture>
       <div className="home-shade absolute inset-0 -z-10" />
+      <div className="home-scan" aria-hidden="true" />
+      <div className="home-focus home-focus-one" aria-hidden="true" />
+      <div className="home-focus home-focus-two" aria-hidden="true" />
       <svg className="home-research-trace" viewBox="0 0 1000 520" fill="none" aria-hidden="true">
         <path className="home-trace-path" d="M70 366C212 366 224 266 348 266C470 266 486 344 606 344C736 344 750 208 914 208" />
         <circle className="home-trace-node home-trace-node-one" cx="348" cy="266" r="5" />
