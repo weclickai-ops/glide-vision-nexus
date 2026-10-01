@@ -32,7 +32,7 @@ export function SiteChrome({ children }: { children: ReactNode }) {
       <header className={`site-header ${hidden ? "is-solid is-hidden" : home && !scrolled ? "is-overlay" : "is-solid"}`}>
         <div className="site-container flex h-[5.4rem] items-center justify-between gap-6">
           <Link to="/" aria-label="JomoLab home" className="brand-lockup">
-            <img src={logoAsset.url} alt="JomoLab" className="h-6 w-auto lg:h-7" />
+            <img src={logoAsset.url} alt="JomoLab" className="header-logo" />
             <span>Global Fu-Tech R&amp;D Confederation</span>
           </Link>
           <nav className="hidden items-center gap-7 text-[10px] font-medium uppercase lg:flex">
