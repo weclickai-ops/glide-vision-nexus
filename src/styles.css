@@ -90,9 +90,9 @@ a, button { outline-offset: 4px; }
 .site-header.is-solid { background: color-mix(in oklab, var(--background) 94%, transparent); box-shadow: 0 1px 0 var(--border); backdrop-filter: blur(18px); }
 .site-header.is-hidden { transform: translateY(-100%); }
 .brand-lockup { display: flex; align-items: center; gap: 1.25rem; }
-.header-logo { width: 200px; max-width: 300px; height: auto; flex: none; }
-@media (min-width: 640px) { .header-logo { width: 240px; } }
-@media (min-width: 1024px) { .header-logo { width: 280px; } }
+.header-logo { width: 160px; max-width: 215px; height: auto; flex: none; }
+@media (min-width: 640px) { .header-logo { width: 190px; } }
+@media (min-width: 1024px) { .header-logo { width: 215px; max-width: 215px; } }
 .brand-lockup span { border-left: 1px solid var(--border); padding-left: 1.25rem; font-size: .58rem; color: var(--muted-foreground); text-transform: uppercase; }
 .nav-link { position: relative; color: var(--muted-foreground); transition: color .25s ease; }
 .nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.55rem; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .3s ease; }
