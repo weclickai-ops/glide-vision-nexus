@@ -27,8 +27,19 @@ function Index() {
       <div className="home-scan" aria-hidden="true" />
       <div className="home-focus home-focus-one" aria-hidden="true" />
       <div className="home-focus home-focus-two" aria-hidden="true" />
+      <div className="home-orbit-field" aria-hidden="true">
+        <span className="home-orbit home-orbit-one" />
+        <span className="home-orbit home-orbit-two" />
+        <span className="home-orbit home-orbit-three" />
+        <span className="home-sample home-sample-one" />
+        <span className="home-sample home-sample-two" />
+        <span className="home-sample home-sample-three" />
+      </div>
       <svg className="home-research-trace" viewBox="0 0 1000 520" fill="none" aria-hidden="true">
         <path className="home-trace-path" d="M70 366C212 366 224 266 348 266C470 266 486 344 606 344C736 344 750 208 914 208" />
+        <circle className="home-signal" r="4">
+          <animateMotion dur="7s" begin="2.2s" repeatCount="indefinite" path="M70 366C212 366 224 266 348 266C470 266 486 344 606 344C736 344 750 208 914 208" />
+        </circle>
         <circle className="home-trace-node home-trace-node-one" cx="348" cy="266" r="5" />
         <circle className="home-trace-node home-trace-node-two" cx="606" cy="344" r="5" />
         <circle className="home-trace-node home-trace-node-three" cx="914" cy="208" r="5" />
