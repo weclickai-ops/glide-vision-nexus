@@ -135,12 +135,21 @@ a, button { outline-offset: 4px; }
 @keyframes slow-turn { to { transform: rotate(360deg); } }
 @keyframes trace-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 @keyframes node-calibrate { 0% { opacity: 0; transform: scale(0); } 65% { opacity: 1; transform: scale(1.7); } 100% { opacity: .75; transform: scale(1); } }
+@keyframes research-scan { 0% { opacity: 0; transform: translateX(-20vw); } 20% { opacity: .55; } 78% { opacity: .35; } 100% { opacity: 0; transform: translateX(105vw); } }
+@keyframes focus-resolve { 0% { opacity: 0; transform: scale(.5); } 55% { opacity: .6; transform: scale(1.12); } 100% { opacity: .28; transform: scale(1); } }
 .page-enter { animation: reveal .55s ease-out both; }
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
 .reveal.is-in { opacity: 1; transform: none; }
 .reveal-up { animation: reveal .7s ease-out both; }
 .home-cover-image { animation: cover-settle 1.5s cubic-bezier(.2,.7,.2,1) both; object-position: right center; }
 .home-shade { background: linear-gradient(90deg, color-mix(in oklab, var(--background) 92%, transparent) 0%, color-mix(in oklab, var(--background) 65%, transparent) 40%, transparent 72%); }
+.home-scan { position: absolute; inset: 0 auto 0 -8rem; z-index: -6; width: 7rem; pointer-events: none; opacity: 0; background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--background) 68%, transparent), transparent); transform: skewX(-9deg); animation: research-scan 2.8s .65s cubic-bezier(.2,.7,.2,1) both; }
+.home-focus { position: absolute; z-index: -4; width: 4.75rem; aspect-ratio: 1; border: 1px solid color-mix(in oklab, var(--primary) 58%, transparent); border-radius: 50%; pointer-events: none; opacity: 0; transform-origin: center; animation: focus-resolve .9s cubic-bezier(.2,.7,.2,1) forwards; }
+.home-focus::before, .home-focus::after { content: ""; position: absolute; inset: 50% auto auto 50%; background: color-mix(in oklab, var(--primary) 58%, transparent); transform: translate(-50%, -50%); }
+.home-focus::before { width: 140%; height: 1px; }
+.home-focus::after { width: 1px; height: 140%; }
+.home-focus-one { right: 29%; top: 28%; animation-delay: 1.55s; }
+.home-focus-two { right: 13%; top: 55%; width: 3.25rem; animation-delay: 2.05s; }
 .home-hero-label { opacity: 0; animation: reveal .65s .2s ease-out forwards; }
 .home-hero-title { font-family: var(--font-display); font-size: clamp(2.8rem, 5.8vw, 5.7rem); font-weight: 300; line-height: 1.02; letter-spacing: 0; opacity: 0; animation: reveal .8s .32s cubic-bezier(.2,.7,.2,1) forwards; }
 .home-hero-tagline { opacity: 0; animation: reveal .8s .48s cubic-bezier(.2,.7,.2,1) forwards; }
@@ -162,6 +171,8 @@ a, button { outline-offset: 4px; }
   .home-hero-title { max-width: 11ch; font-size: clamp(2.65rem, 8vw, 3.65rem); }
   .home-hero-tagline { max-width: 32rem; }
   .home-research-trace { inset: 28% -32% auto 8%; width: 124%; height: 45%; opacity: .65; }
+  .home-focus-one { right: 21%; top: 53%; }
+  .home-focus-two { right: 7%; top: 70%; }
   .inner-hero-orbit { width: 80vw; right: -30vw; top: 5%; }
 }
 @media (max-width: 520px) {
@@ -175,4 +186,6 @@ a, button { outline-offset: 4px; }
   .home-hero-label, .home-hero-title, .home-hero-tagline { opacity: 1 !important; }
   .home-trace-path { stroke-dashoffset: 0 !important; }
   .home-trace-node { opacity: .75 !important; transform: none !important; }
+  .home-scan { display: none !important; }
+  .home-focus { opacity: .28 !important; transform: none !important; }
 }
