@@ -35,7 +35,7 @@ export function SiteChrome({ children }: { children: ReactNode }) {
          <div className="mx-auto grid max-w-screen-2xl gap-8 text-sm md:grid-cols-3 md:items-end">
            <div><img src={logoAsset.url} alt="JomoLab" className="h-6 w-auto" /><p className="mt-4 max-w-xs text-muted-foreground">Fu-Tech R&amp;D Confederation for sustainable progress.</p></div>
            <div className="font-mono text-[9px] uppercase text-muted-foreground md:text-center">Observe · Test · Apply / 2035+</div>
-          <a href="mailto:team@jomolab.co" className="inline-flex items-center gap-2 text-primary md:justify-self-end">team@jomolab.co <ArrowUpRight className="size-4" /></a>
+           <a href="mailto:ratnesh@jomolab.in" className="inline-flex items-center gap-2 text-primary md:justify-self-end">ratnesh@jomolab.in <ArrowUpRight className="size-4" /></a>
         </div>
       </footer>
     </div>

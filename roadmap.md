@@ -7,3 +7,4 @@
 - [x] Remove portrait photography from the Leadership page.
 - [x] Verify desktop and mobile layouts, navigation, metadata, and rendering.
 - [x] Match the homepage first viewport to the supplied JomoLab cover reference.
+- [ ] Replace all visible website copy with the final PDF content exactly, page by page.
