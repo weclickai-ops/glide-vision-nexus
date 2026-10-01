@@ -4,9 +4,9 @@ import { PageHero, Reveal } from "../components/site/motion";
 
 export const Route = createFileRoute("/contact")({ head: () => ({ meta: [
   { title: "Contact JomoLab® | Join the Confederation" },
-  { name: "description", content: "Connect with JomoLab to collaborate on research, ventures, and future technology." },
+  { name: "description", content: "Website: jomolab.co Email: ratnesh@jomolab.in" },
   { property: "og:title", content: "Contact JomoLab® | Join the Confederation" },
-  { property: "og:description", content: "Start a conversation with JomoLab at team@jomolab.co." },
+  { property: "og:description", content: "Future Begins Here. Join The Confederation." },
   { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
 ] }), component: Contact });
 
