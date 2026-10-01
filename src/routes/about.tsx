@@ -1,24 +1,24 @@
+// ============= Full file contents =============
 import { createFileRoute } from "@tanstack/react-router";
-import collaborationImage from "../assets/research-collaboration.jpg";
-import networkImage from "../assets/research-network.jpg";
 import { PageHero, Reveal, SectionHeading } from "../components/site/motion";
 
 export const Route = createFileRoute("/about")({ head: () => ({ meta: [
-  { title: "About the Confederation | JomoLab®" },
-  { name: "description", content: "JomoLab is a global Fu-Tech R&D Confederation building technologies that shape the next decade of human evolution." },
-  { property: "og:title", content: "About the Confederation | JomoLab®" },
-  { property: "og:description", content: "A research confederation built to turn purposeful inquiry into sustainable progress." },
+  { title: "About JomoLab® | Fu-Tech R&D Confederation" },
+  { name: "description", content: "JomoLab is a global Fu-Tech R&D Confederation building technologies that shape the next decade of human evolution — from FOMO to JOMO." },
+  { property: "og:title", content: "About JomoLab® | Fu-Tech R&D Confederation" },
+  { property: "og:description", content: "Where extraordinary minds collaborate to solve extraordinary challenges." },
   { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
 ] }), component: About });
 
-const aims = ["Build globally impactful technology ventures", "Foster world-class research collaborations", "Support sustainable innovation initiatives", "Create products that positively impact millions", "Develop future-ready solutions across industries", "Bridge the gap between innovation and implementation"];
-
 function About() { return <>
-  <PageHero label="Page 1" title="About Jomolab" copy="JomoLab® is a global Fu-Tech (Future Technology) R&D Confederation bringing together entrepreneurs, scientists, researchers, innovators, and industry leaders to create technologies that shape the next decade of human evolution." />
-  <section className="px-5 py-20 md:px-8 md:py-28"><div className="site-container grid gap-12 lg:grid-cols-12 lg:items-center">
-    <Reveal className="lg:col-span-5"><p className="section-label">About Jomolab</p><p className="text-xl leading-[1.75] text-muted-foreground">JomoLab® is a global Fu-Tech (Future Technology) R&amp;D Confederation bringing together entrepreneurs, scientists, researchers, innovators, and industry leaders to create technologies that shape the next decade of human evolution. From Artificial Intelligence and Extended Reality to Sustainability, Healthcare, Education, Space Technology, and Smart Infrastructure, we are building solutions for a better tomorrow. Founded with a vision for 2035 and beyond, JomoLab is where extraordinary minds collaborate to solve extraordinary challenges.</p></Reveal>
-    <Reveal delay={100} className="image-panel aspect-[4/3] lg:col-span-6 lg:col-start-7"><img src={collaborationImage} alt="Researchers collaborating on future city systems" width={1600} height={1200} loading="lazy" /></Reveal>
+  <PageHero label="About Us" title="About Jomolab" copy="Where extraordinary minds collaborate to solve extraordinary challenges." />
+  <section className="px-5 py-20 md:px-8 md:py-28"><div className="site-container">
+    <Reveal><SectionHeading eyebrow="About Us" title="A global Fu-Tech R&D Confederation" /></Reveal>
+    <Reveal className="mt-10 max-w-4xl"><p className="text-xl leading-[1.75] text-muted-foreground">JomoLab® is a global Fu-Tech (Future Technology) R&amp;D Confederation bringing together entrepreneurs, scientists, researchers, innovators, and industry leaders to create technologies that shape the next decade of human evolution. From Artificial Intelligence and Extended Reality to Sustainability, Healthcare, Education, Space Technology, and Smart Infrastructure, we are building solutions for a better tomorrow. Founded with a vision for 2033 and beyond, JomoLab is where extraordinary minds collaborate to solve extraordinary challenges.</p></Reveal>
   </div></section>
-  <section className="bg-muted px-5 py-20 md:px-8 md:py-28"><div className="site-container"><Reveal><SectionHeading eyebrow="Our Vision" title="From FOMO to JOMO" /></Reveal><div className="mt-10 grid gap-4 lg:grid-cols-12"><Reveal className="soft-panel p-8 md:p-12 lg:col-span-7"><p className="text-xl leading-[1.75] text-muted-foreground">The modern world is driven by fear, distraction, and information overload. At JomoLab, we believe humanity needs a transition from FOMO (Fear of Missing Out) to JOMO (Joy of Missing Out). JOMO represents clarity, purpose, and meaningful innovation. We envision a future where technology simplifies life, empowers people, and creates sustainable progress rather than digital chaos. Our Vision is not merely to build products. Our Vision is to create technologies that improve the quality of life for future generations</p></Reveal><Reveal delay={100} className="image-panel min-h-80 lg:col-span-5"><img src={networkImage} alt="Interconnected research structures" width={1600} height={1200} loading="lazy" /></Reveal></div></div></section>
-  <section className="px-5 py-20 md:px-8 md:py-28"><div className="site-container"><Reveal><SectionHeading eyebrow="Our Mission 2035" title="Building the Future Together" /></Reveal><Reveal className="mt-10 max-w-4xl"><p className="text-xl leading-[1.75] text-muted-foreground">We stand at one of the most significant turning points in human history. The coming decade will redefine how we live, learn, work, communicate, travel, and create value. JomoLab&apos;s mission is to become a globally recognized innovation confederation that brings together exceptional minds and breakthrough technologies under one ecosystem.</p></Reveal><p className="section-label mt-16">By 2035 We Aim To</p><div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">{aims.map((aim, index) => <Reveal key={aim} delay={index * 45} className={index % 2 ? "blue-panel p-7" : "soft-panel p-7"}><span className="number-chip">{String(index + 1).padStart(2, "0")}</span><p className="mt-12 text-lg font-medium leading-7">{aim}</p></Reveal>)}</div></div></section>
+  <section className="bg-muted px-5 py-20 md:px-8 md:py-28"><div className="site-container">
+    <Reveal><SectionHeading eyebrow="Vision &amp; Mission" title="From FOMO to JOMO" /></Reveal>
+    <Reveal className="mt-10 max-w-4xl"><p className="text-xl leading-[1.75] text-muted-foreground">The modern world is driven by fear, distraction, and information overload. At JomoLab, we believe humanity needs a transition from FOMO (Fear of Missing Out) to JOMO (Joy of Missing Out). JOMO represents clarity, purpose, and meaningful innovation. We envision a future where technology simplifies life, empowers people, and creates sustainable progress rather than digital chaos.</p></Reveal>
+    <Reveal delay={100} className="mt-8 max-w-4xl"><p className="soft-panel p-8 text-xl leading-[1.75] text-foreground md:p-12">Our mission is not merely to build products. <span className="text-primary">Our mission is to create technologies that improve the quality of life for future generations.</span></p></Reveal>
+  </div></section>
   </>; }
