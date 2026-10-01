@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DomainsRouteImport } from './routes/domains'
 import { Route as EcosystemRouteImport } from './routes/ecosystem'
 import { Route as LeadershipRouteImport } from './routes/leadership'
+import { Route as ProductsRouteImport } from './routes/products'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const LeadershipRoute = LeadershipRouteImport.update({
   path: '/leadership',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/domains': typeof DomainsRoute
   '/ecosystem': typeof EcosystemRoute
   '/leadership': typeof LeadershipRoute
+  '/products': typeof ProductsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/domains': typeof DomainsRoute
   '/ecosystem': typeof EcosystemRoute
   '/leadership': typeof LeadershipRoute
+  '/products': typeof ProductsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,13 +79,27 @@ export interface FileRoutesById {
   '/domains': typeof DomainsRoute
   '/ecosystem': typeof EcosystemRoute
   '/leadership': typeof LeadershipRoute
+  '/products': typeof ProductsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/contact' | '/domains' | '/ecosystem' | '/leadership'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/domains'
+    | '/ecosystem'
+    | '/leadership'
+    | '/products'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/domains' | '/ecosystem' | '/leadership'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/domains'
+    | '/ecosystem'
+    | '/leadership'
+    | '/products'
   id:
     | '__root__'
     | '/'
@@ -86,6 +108,7 @@ export interface FileRouteTypes {
     | '/domains'
     | '/ecosystem'
     | '/leadership'
+    | '/products'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -95,6 +118,7 @@ export interface RootRouteChildren {
   DomainsRoute: typeof DomainsRoute
   EcosystemRoute: typeof EcosystemRoute
   LeadershipRoute: typeof LeadershipRoute
+  ProductsRoute: typeof ProductsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -141,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LeadershipRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -151,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   DomainsRoute: DomainsRoute,
   EcosystemRoute: EcosystemRoute,
   LeadershipRoute: LeadershipRoute,
+  ProductsRoute: ProductsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

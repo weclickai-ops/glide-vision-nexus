@@ -1,43 +1,38 @@
 export const domains = [
-  ["01", "Artificial Intelligence", "Intelligence systems that help organizations create, decide, and scale with purpose."],
-  ["02", "Extended Reality", "Immersive environments for learning, training, entertainment, and new human experiences."],
-  ["03", "Sustainable Systems", "Climate, food, mobility, and infrastructure innovation designed for long-term impact."],
-  ["04", "Human Futures", "Healthcare, education, biotechnology, space, and technologies that expand human potential."],
+  "Artificial Intelligence",
+  "Virtual & Extended Reality",
+  "Healthcare & Biotechnology",
+  "Education & Learning Systems",
+  "Space Technology",
+  "Smart Cities",
+  "Spiritual Science",
+  "Finance & Digital Currency",
+  "Sustainable Food Systems",
+  "Mobility & Transportation",
+  "Consumer Technology",
+  "Climate Innovation",
+  "Human Enhancement Technologies",
 ];
-
-export const horizon = ["Smart Cities", "Future Finance", "Consumer Tech", "Sustainable Food", "Mobility", "Climate Innovation", "Human Enhancement", "Space"];
 
 export const ventures = [
-  ["JB", "JomoBit AI", "AI-powered content creation, distribution, analytics, and digital growth."],
-  ["JS", "JomoSet XR", "Next-generation immersive experiences, training environments, and XR applications."],
-  ["ES", "ESG Advocacy", "Technology and strategic storytelling for measurable environmental and social impact."],
-  ["FS", "Global Fu-Tech Summit", "Where innovators, researchers, policymakers, and investors shape the world of 2035."],
-  ["DD", "Dazzel Digital", "AI-first growth and digital transformation for organizations building what comes next."],
-];
-
-export const advisors = [
-  ["Vinay Singhal", "Co-Founder & CEO, STAGE OTT"],
-  ["Ankur Dinesh Garg", "Advisor · Manthan, Government of India · IIT Bombay · Founder, Hotify AI"],
-  ["Senthil Narasimhan", "Global Program Manager, Cognizant Switzerland"],
-  ["Dinesh Murlidharan", "Strategic Advisor, Trade & Investment · UAE Trade Commission"],
+  ["01", "JomoBit AI", "AI-Powered Content Automation Platform", "JomoBit helps businesses automate content creation, content distribution, analytics, and digital growth. Transforming how brands create and scale digital content through Artificial Intelligence."],
+  ["02", "JomoSet XR", "The Future of Immersive Experiences", "A next-generation Virtual and Extended Reality initiative focused on creating immersive digital experiences, training environments, entertainment solutions, and future-ready XR applications."],
+  ["03", "ESG Advocacy", "AI-Powered ESG Intelligence & Impact Platform", "Helping organizations measure, manage, communicate, and amplify their Environmental, Social, and Governance initiatives through data, technology, and strategic storytelling."],
+  ["04", "Global Fu-Tech Summit", "Where Future Leaders Meet", "An international platform bringing together innovators, founders, researchers, policymakers, investors, and industry leaders to discuss and shape the future of technology and humanity. Exploring the question: \"How will the world look in 2035?\""],
+  ["05", "Dazzel Digital", "AI-First High Growth Agency", "A growth-focused marketing and digital transformation agency helping startups, enterprises, and governments build brands for the AI era. 8+ Years | 300+ Clients | 2M+ Qualified Leads Generated"],
 ];
 
 export const members = [
-  ["Vivek Dangi", "Technocrat · Head of International Collaboration", "Toronto, Canada"],
-  ["Aakash Porwal", "Space Tech Researcher · Entrepreneur · Member, ISRO", "India"],
-  ["Manoj Pachauri", "Lead Growth Strategist, JomoLab", "India"],
-  ["Aayush Gorani", "Serial Entrepreneur · Head of Business Development", "India"],
-  ["Mayank Srivastava", "Subject Matter Expert, Design & Communication", "India"],
-  ["Lalit Barman", "Subject Matter Expert, Virtual Reality", "India"],
-  ["Nikhil Bhatnagar", "Founder, Homeguruji and Sparkvr", "India"],
-  ["Saurabh Tiwari", "Visionary Leader · Technocrat", "India"],
+  "Vivek Dangi",
+  "Manoj Pachauri",
+  "Ayush Gorani",
+  "Nikhil Bhatnagar",
 ];
-
-export const vision = ["Build globally impactful ventures", "Foster world-class research", "Advance sustainable innovation", "Bridge ideas and implementation"];
 
 export const nav = [
   ["/about", "About"],
-  ["/domains", "Domains"],
+  ["/domains", "Fu-Tech Research"],
   ["/ecosystem", "Ecosystem"],
-  ["/leadership", "Leadership"],
+  ["/leadership", "Members"],
+  ["/products", "Products & IPs"],
 ] as const;
