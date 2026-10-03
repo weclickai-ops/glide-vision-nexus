@@ -13,8 +13,7 @@ export const Route = createFileRoute("/about")({ head: () => ({ meta: [
 function About() { return <>
   <PageHero title="About Jomolab" />
   <section className="px-5 py-20 md:px-8 md:py-28"><div className="site-container">
-    <Reveal><SectionHeading eyebrow="" title="About Jomolab" /></Reveal>
-    <Reveal className="mt-10 max-w-4xl"><p className="text-xl leading-[1.75] text-muted-foreground">JomoLab® is a global Fu-Tech (Future Technology) R&amp;D Confederation bringing together entrepreneurs, scientists, researchers, innovators, and industry leaders to create technologies that shape the next decade of human evolution. From Artificial Intelligence and Extended Reality to Sustainability, Healthcare, Education, Space Technology, and Smart Infrastructure, we are building solutions for a better tomorrow. Founded with a vision for 2035 and beyond, JomoLab is where extraordinary minds collaborate to solve extraordinary challenges.</p></Reveal>
+    <Reveal className="max-w-4xl"><p className="text-xl leading-[1.75] text-muted-foreground">JomoLab® is a global Fu-Tech (Future Technology) R&amp;D Confederation bringing together entrepreneurs, scientists, researchers, innovators, and industry leaders to create technologies that shape the next decade of human evolution. From Artificial Intelligence and Extended Reality to Sustainability, Healthcare, Education, Space Technology, and Smart Infrastructure, we are building solutions for a better tomorrow. Founded with a vision for 2035 and beyond, JomoLab is where extraordinary minds collaborate to solve extraordinary challenges.</p></Reveal>
   </div></section>
   <section className="bg-muted px-5 py-20 md:px-8 md:py-28"><div className="site-container">
     <Reveal><SectionHeading eyebrow="" title="Our Vision" /></Reveal>

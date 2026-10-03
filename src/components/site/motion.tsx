@@ -21,14 +21,14 @@ export function Reveal({ children, className = "", delay = 0, as: Tag = "div" }:
   return <Component ref={ref as never} className={`reveal ${shown ? "is-in" : ""} ${className}`} style={{ transitionDelay: `${delay}ms` } as CSSProperties}>{children}</Component>;
 }
 
-export function PageHero({ label, title, copy }: { label?: string; title: string; copy?: string }) {
+export function PageHero({ label, title, copy }: { label?: string; title: ReactNode; copy?: string }) {
   return (
     <section className="inner-hero">
       <div className="inner-hero-orbit" aria-hidden="true"><ResearchDiagram index={3} /></div>
       <div className="site-container relative z-10 grid gap-10 pb-16 pt-36 md:pb-24 md:pt-44 lg:grid-cols-12 lg:items-end">
         <div className={copy ? "lg:col-span-8" : "lg:col-span-12"}>
           {label && <p className="section-label reveal-up">{label}</p>}
-          <h1 className="reveal-up display-title max-w-5xl">{title}</h1>
+          <h1 className="reveal-up display-title max-w-5xl lg:max-w-none">{title}</h1>
         </div>
         {copy && <p className="reveal-up max-w-md text-base leading-7 text-muted-foreground lg:col-span-4 lg:border-l lg:border-border lg:pl-7">{copy}</p>}
       </div>
@@ -36,7 +36,7 @@ export function PageHero({ label, title, copy }: { label?: string; title: string
   );
 }
 
-export function SectionHeading({ eyebrow, title, action }: { eyebrow: string; title: string; action?: ReactNode }) {
+export function SectionHeading({ eyebrow, title, action }: { eyebrow: string; title: ReactNode; action?: ReactNode }) {
   return <div className="section-heading"><div>{eyebrow && <p className="section-label">{eyebrow}</p>}<h2 className="section-title">{title}</h2></div>{action}</div>;
 }
 

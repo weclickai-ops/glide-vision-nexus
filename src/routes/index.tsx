@@ -47,7 +47,7 @@ function Index() {
       <div className="site-container flex min-h-[min(900px,100svh)] items-center pb-20 pt-32">
         <div className="home-hero-copy max-w-3xl">
           <p className="section-label home-hero-label text-foreground">Global</p>
-          <h1 className="home-hero-title max-w-2xl text-primary">Fu-Tech R&amp;D<br className="hidden sm:block" /> Confederation</h1>
+          <h1 className="home-hero-title text-primary"><span className="block sm:whitespace-nowrap">Fu-Tech R&amp;D</span> <span className="block">Confederation</span></h1>
           <p className="home-hero-tagline mt-7 max-w-xl text-xl font-light leading-relaxed text-foreground md:text-3xl">Pioneering Tomorrow&apos;s Innovations for a Sustainable Earth</p>
         </div>
       </div>
