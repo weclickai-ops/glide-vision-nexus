@@ -12,3 +12,4 @@
 - [x] Consolidate the final PDF wording into the six requested pages and remove Members as a separate page.
 - [x] Give the homepage final polish with restrained research animation and remove the repeated JomoLab banner wordmark.
 - [x] Add layered attention-guiding research motion to the existing homepage without changing its interface.
+- [x] Apply the final header cleanup and compose the homepage heading as exactly two lines.

@@ -165,6 +165,7 @@ a, button { outline-offset: 4px; }
 .home-sample-three { right: 17%; bottom: 25%; animation-delay: 3.7s; }
 .home-hero-label { opacity: 0; animation: reveal .65s .2s ease-out forwards; }
 .home-hero-title { font-family: var(--font-display); font-size: clamp(2.8rem, 5.8vw, 5.7rem); font-weight: 300; line-height: 1.02; letter-spacing: 0; opacity: 0; animation: reveal .8s .32s cubic-bezier(.2,.7,.2,1) forwards; }
+.home-hero-global { font-weight: 500; }
 .home-hero-tagline { opacity: 0; animation: reveal .8s .48s cubic-bezier(.2,.7,.2,1) forwards; }
 .home-research-trace { position: absolute; inset: 15% 2% auto 2%; z-index: -5; width: 96%; height: 65%; color: color-mix(in oklab, var(--primary) 42%, transparent); pointer-events: none; }
 .home-trace-path { fill: none; stroke: currentColor; stroke-width: 1; vector-effect: non-scaling-stroke; path-length: 1; stroke-dasharray: 1; stroke-dashoffset: 1; animation: trace-draw 1.8s .75s cubic-bezier(.22,.61,.36,1) forwards; }
@@ -182,7 +183,7 @@ a, button { outline-offset: 4px; }
   .home-shade { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 93%, transparent) 0%, color-mix(in oklab, var(--background) 62%, transparent) 45%, transparent 72%); }
   .home-cover-image { object-position: 58% center; }
   .home-hero-copy { align-self: flex-start; margin-top: 2rem; }
-  .home-hero-title { max-width: 11ch; font-size: clamp(2.65rem, 8vw, 3.65rem); }
+  .home-hero-title { max-width: none; font-size: clamp(2.4rem, 7.5vw, 3.65rem); }
   .home-hero-tagline { max-width: 32rem; }
   .home-research-trace { inset: 28% -32% auto 8%; width: 124%; height: 45%; opacity: .65; }
   .home-focus-one { right: 21%; top: 53%; }
@@ -192,7 +193,7 @@ a, button { outline-offset: 4px; }
 }
 @media (max-width: 520px) {
   .home-cover-image { object-position: 54% center; }
-  .home-hero-title { max-width: 10ch; font-size: clamp(2.65rem, 12vw, 3.15rem); }
+  .home-hero-title { max-width: none; font-size: clamp(2rem, 9vw, 3.15rem); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
