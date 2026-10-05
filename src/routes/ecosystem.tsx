@@ -1,7 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import collaborationImage from "../assets/research-collaboration.jpg";
-import networkImage from "../assets/research-network.jpg";
+import portraitImage from "../assets/chief-thinker-portrait.jpg.asset.json";
 import { members } from "../components/site/data";
 import { PageHero, ResearchDiagram, Reveal, SectionHeading } from "../components/site/motion";
 
