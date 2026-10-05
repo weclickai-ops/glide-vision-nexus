@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
-import logoAsset from "../../assets/jomolab-logo-cropped.png.asset.json";
+import logoImage from "../../assets/jomolab-logo-cropped.png";
 import { Button } from "../ui/button";
 import { nav } from "./data";
 
@@ -32,7 +32,7 @@ export function SiteChrome({ children }: { children: ReactNode }) {
       <header className={`site-header ${hidden ? "is-solid is-hidden" : home && !scrolled ? "is-overlay" : "is-solid"}`}>
         <div className="site-container flex h-[5.4rem] items-center justify-between gap-6">
           <Link to="/" aria-label="JomoLab home" className="brand-lockup">
-            <img src={logoAsset.url} alt="JomoLab" className="header-logo" />
+            <img src={logoImage} alt="JomoLab" className="header-logo" />
           </Link>
           <nav className="hidden items-center gap-7 text-[10px] font-medium uppercase lg:flex">
             {nav.filter(([to]) => to !== "/").map(([to, label]) => <Link key={to} to={to} className="nav-link" activeProps={{ className: "nav-link is-active" }}>{label}</Link>)}
@@ -45,7 +45,7 @@ export function SiteChrome({ children }: { children: ReactNode }) {
       <footer className="site-footer">
         <div className="site-container grid gap-14 py-16 lg:grid-cols-12 lg:py-20">
           <div className="lg:col-span-6">
-            <img src={logoAsset.url} alt="JomoLab" className="footer-logo h-7 w-auto" />
+            <img src={logoImage} alt="JomoLab" className="footer-logo h-7 w-auto" />
             <h2 className="mt-10 max-w-lg text-3xl font-light leading-tight md:text-5xl">Future Begins Here.</h2>
             <Link to="/contact" className="footer-action mt-8 inline-flex items-center gap-3">Join The Confederation <ArrowUpRight className="size-5" /></Link>
           </div>
